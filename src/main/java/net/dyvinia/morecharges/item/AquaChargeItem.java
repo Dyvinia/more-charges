@@ -1,5 +1,6 @@
 package net.dyvinia.morecharges.item;
 
+import net.dyvinia.morecharges.sound.ModSounds;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
@@ -8,7 +9,6 @@ import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.sound.SoundEvent;
-import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
@@ -44,7 +44,7 @@ public class AquaChargeItem extends Item {
                 if (blockState.get(FluidBlock.LEVEL) > 0) {
                     world.setBlockState(blockPos, Blocks.WATER.getDefaultState(), Block.NOTIFY_ALL | Block.REDRAW_ON_MAIN_THREAD);
 
-                    SoundEvent soundEvent = SoundEvents.BLOCK_POINTED_DRIPSTONE_DRIP_WATER_INTO_CAULDRON;
+                    SoundEvent soundEvent = ModSounds.AQUA_CHARGE;
                     user.playSound(soundEvent, 1.0f, 1.0f);
 
                     user.incrementStat(Stats.USED.getOrCreateStat(this));

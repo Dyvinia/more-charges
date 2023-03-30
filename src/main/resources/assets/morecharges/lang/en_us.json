@@ -2,5 +2,7 @@
   "item.morecharges.ender_charge": "Ender Charge",
   "item.morecharges.aqua_charge": "Aqua Charge",
 
-  "itemGroup.morecharges.morecharges": "MoreCharges"
+  "itemGroup.morecharges.morecharges": "MoreCharges",
+
+  "morecharges.aqua_charge": "Aqua Charge"
 }

@@ -1,6 +1,7 @@
 package net.dyvinia.morecharges;
 
 import net.dyvinia.morecharges.item.ModItems;
+import net.dyvinia.morecharges.sound.ModSounds;
 import net.fabricmc.api.ModInitializer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -19,5 +20,6 @@ public class MoreCharges implements ModInitializer {
 		// Proceed with mild caution.
 
 		ModItems.registerModItems();
+		ModSounds.registerModSounds();
 	}
 }
