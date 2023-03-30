@@ -7,8 +7,8 @@ import net.minecraft.util.Identifier;
 import net.minecraft.util.registry.Registry;
 
 public class ModItems {
-    public static final Item ENDER_CHARGE = registerItem("ender_charge",
-            new EnderChargeItem(new FabricItemSettings().group(ModItemGroup.MORECHARGES)));
+    public static final Item ENDER_CHARGE = registerItem("ender_charge", new EnderChargeItem(new FabricItemSettings().group(ModItemGroup.MORECHARGES)));
+    public static final Item AQUA_CHARGE = registerItem("aqua_charge", new AquaChargeItem(new FabricItemSettings().group(ModItemGroup.MORECHARGES)));
 
     private static Item registerItem(String name, Item item) {
         return Registry.register(Registry.ITEM, new Identifier(MoreCharges.MOD_ID, name), item);
