@@ -5,9 +5,10 @@ import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.block.FluidBlock;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.fluid.Fluids;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
+import net.minecraft.sound.SoundEvent;
+import net.minecraft.sound.SoundEvents;
 import net.minecraft.stat.Stats;
 import net.minecraft.util.Hand;
 import net.minecraft.util.TypedActionResult;
@@ -38,7 +39,10 @@ public class AquaChargeItem extends Item {
             if (blockState.getBlock() instanceof FluidBlock) {
                 if (blockState.get(FluidBlock.LEVEL) > 0) {
                     world.setBlockState(blockPos, Blocks.WATER.getDefaultState(), Block.NOTIFY_ALL | Block.REDRAW_ON_MAIN_THREAD);
-                    Fluids.WATER.getBucketFillSound().ifPresent(sound -> user.playSound(sound, 1.0f, 1.0f));
+
+                    SoundEvent soundEvent = SoundEvents.BLOCK_POINTED_DRIPSTONE_DRIP_WATER_INTO_CAULDRON;
+                    user.playSound(soundEvent, 1.0f, 1.0f);
+
                     user.incrementStat(Stats.USED.getOrCreateStat(this));
                     if (!user.getAbilities().creativeMode) {
                         itemStack.decrement(1);

@@ -26,10 +26,10 @@ public class EnderChargeItem extends Item {
             double d = user.getX();
             double e = user.getY();
             double f = user.getZ();
-            for (int i = 0; i < 16; ++i) {
-                double g = user.getX() + (user.getRandom().nextDouble() - 0.5) * 16.0;
-                double h = MathHelper.clamp(user.getY() + (double)(user.getRandom().nextInt(16) - 8), world.getBottomY(), world.getBottomY() + ((ServerWorld)world).getLogicalHeight() - 1);
-                double j = user.getZ() + (user.getRandom().nextDouble() - 0.5) * 16.0;
+            for (int i = 0; i < 24; ++i) {
+                double g = user.getX() + (user.getRandom().nextDouble() - 0.5) * 24.0;
+                double h = MathHelper.clamp(user.getY() + (double)(user.getRandom().nextInt(24) - 8), world.getBottomY(), world.getBottomY() + ((ServerWorld)world).getLogicalHeight() - 1);
+                double j = user.getZ() + (user.getRandom().nextDouble() - 0.5) * 24.0;
                 if (user.hasVehicle()) {
                     user.stopRiding();
                 }
