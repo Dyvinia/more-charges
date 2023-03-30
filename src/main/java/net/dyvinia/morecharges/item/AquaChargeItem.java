@@ -36,6 +36,10 @@ public class AquaChargeItem extends Item {
             BlockPos blockPos = blockHitResult.getBlockPos();
             BlockState blockState = world.getBlockState(blockPos);
 
+            if (!world.canPlayerModifyAt(user, blockPos)) {
+                return TypedActionResult.fail(itemStack);
+            }
+
             if (blockState.getBlock() instanceof FluidBlock) {
                 if (blockState.get(FluidBlock.LEVEL) > 0) {
                     world.setBlockState(blockPos, Blocks.WATER.getDefaultState(), Block.NOTIFY_ALL | Block.REDRAW_ON_MAIN_THREAD);
