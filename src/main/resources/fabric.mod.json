@@ -3,7 +3,7 @@
   "id": "morecharges",
   "version": "${version}",
 
-  "name": "More Charges",
+  "name": "MoreCharges",
   "description": "Adds more utility charges. Now the fire charge won't be alone!",
   "authors": [
     "Dyvinia"
