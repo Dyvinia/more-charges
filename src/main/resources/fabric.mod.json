@@ -4,13 +4,13 @@
   "version": "${version}",
 
   "name": "More Charges",
-  "description": "This is an example description! Tell everyone what your mod is about!",
+  "description": "Adds more utility charges. Now the fire charge won't be alone!",
   "authors": [
     "Dyvinia"
   ],
   "contact": {
-    "homepage": "https://fabricmc.net/",
-    "sources": "https://github.com/FabricMC/fabric-example-mod"
+    "homepage": "",
+    "sources": "https://github.com/Dyvinia/more-charges"
   },
 
   "license": "MIT",
