@@ -51,7 +51,7 @@ public class ResonatingChargeItem extends Item {
             return TypedActionResult.success(itemStack, world.isClient());
         }
 
-        user.getItemCooldownManager().set(this, 15);
+        user.getItemCooldownManager().set(this, 10);
         return TypedActionResult.pass(itemStack);
     }
 
