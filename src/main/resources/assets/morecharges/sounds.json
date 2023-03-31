@@ -8,5 +8,11 @@
       "morecharges:aqua_charge4",
       "morecharges:aqua_charge5"
     ]
+  },
+  "resonating_charge": {
+    "subtitle": "morecharges.aqua_charge",
+    "sounds": [
+      "morecharges:resonating_charge"
+    ]
   }
 }

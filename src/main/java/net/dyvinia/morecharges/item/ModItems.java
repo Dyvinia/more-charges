@@ -15,9 +15,10 @@ public class ModItems {
 
     public static final Item ENDER_CHARGE = new EnderChargeItem(new FabricItemSettings().group(MORECHARGES));
     public static final Item AQUA_CHARGE = new AquaChargeItem(new FabricItemSettings().group(MORECHARGES));
+    public static final Item RESONATING_CHARGE = new ResonatingChargeItem(new FabricItemSettings().group(MORECHARGES));
 
-    private static Item registerItem(String name, Item item) {
-        return Registry.register(Registry.ITEM, new Identifier(MoreCharges.MOD_ID, name), item);
+    private static void registerItem(String name, Item item) {
+        Registry.register(Registry.ITEM, new Identifier(MoreCharges.MOD_ID, name), item);
     }
 
     public static void registerModItems() {
@@ -25,6 +26,7 @@ public class ModItems {
 
         registerItem("ender_charge", ENDER_CHARGE);
         registerItem("aqua_charge", AQUA_CHARGE);
+        registerItem("resonating_charge", RESONATING_CHARGE);
     }
 
 }
