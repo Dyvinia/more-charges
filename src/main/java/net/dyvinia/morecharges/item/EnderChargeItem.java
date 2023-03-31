@@ -39,11 +39,9 @@ public class EnderChargeItem extends Item {
                 user.playSound(soundEvent, 1.0f, 1.0f);
                 break;
             }
-            if (user instanceof PlayerEntity) {
-                user.getItemCooldownManager().set(this, 50);
-                user.damage(DamageSource.FALL, 5.0f);
-                user.onLanding();
-            }
+            user.getItemCooldownManager().set(this, 40);
+            user.damage(DamageSource.FALL, 4.0f);
+            user.onLanding();
         }
         user.incrementStat(Stats.USED.getOrCreateStat(this));
         if (!user.getAbilities().creativeMode) {
