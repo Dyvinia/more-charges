@@ -23,6 +23,7 @@ public class EnderChargeItem extends Item {
     public TypedActionResult<ItemStack> use(World world, PlayerEntity user, Hand hand) {
         ItemStack itemStack = user.getStackInHand(hand);
         if (!world.isClient) {
+            world.sendEntityStatus(user, (byte)46);
             double d = user.getX();
             double e = user.getY();
             double f = user.getZ();
