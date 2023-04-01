@@ -4,12 +4,12 @@
   "version": "${version}",
 
   "name": "MoreCharges",
-  "description": "Adds more utility charges. Now the fire charge won't be alone!",
+  "description": "Adds a few more utility charges. The Fire Charge has been alone for too long!",
   "authors": [
     "Dyvinia"
   ],
   "contact": {
-    "homepage": "",
+    "homepage": "https://modrinth.com/mod/more-charges",
     "sources": "https://github.com/Dyvinia/more-charges"
   },
 
